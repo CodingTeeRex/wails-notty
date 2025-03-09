@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "format": "prettier --ignore-path .gitignore --write '**/*.{js,ts,tsx,json}'",
+        "format": "prettier --ignore-path .prettierignore --write '**/*.{js,ts,tsx,json}'",
         "lint": "eslint .",
         "precommit": "yarn lint && yarn format",
         "test": "echo 'Error: no test specified'",
