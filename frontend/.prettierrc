@@ -8,7 +8,11 @@
     "objectWrap": "collapse",
     "bracketSameLine": false,
     "printWidth": 80,
-    "importOrder": ["^components/(.*)$", "^[./]"],
+    "importOrder": [
+        "^components/(.*)$",
+        "^[./](?!.*\\.(css|scss)$)",
+        ".*\\.(css|scss)$"
+    ],
     "importOrderSeparation": true,
     "importOrderSortSpecifiers": true,
     "plugins": ["@trivago/prettier-plugin-sort-imports"]
