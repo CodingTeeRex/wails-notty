@@ -14,14 +14,10 @@ export default defineConfig([
         rules: {
             'react/react-in-jsx-scope': 'off',
             'react/jsx-uses-react': 'off',
-        },
+            '@typescript-eslint/consistent-type-imports': 'error',
+            '@typescript-eslint/no-duplicate-enum-values': 'error'
+        }
     },
-    {
-        settings: {
-            react: {
-                version: 'detect',
-            },
-        },
-    },
-    globalIgnores(['dist', 'node_modules', 'wailsjs']),
+    { settings: { react: { version: 'detect' } } },
+    globalIgnores(['dist', 'node_modules', 'wailsjs'])
 ]);
