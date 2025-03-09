@@ -1,14 +1,17 @@
-import { MantineProvider } from '@mantine/core';
+import RootLayout from '@components/rootLayout';
+import NoteView from '@components/views/noteView';
+import { MantineProvider, createTheme } from '@mantine/core';
 import '@mantine/core/styles.css';
 
 import './App.css';
 
 function App() {
+    const theme = createTheme({ fontFamily: 'Aptos', defaultRadius: 'md' });
     return (
-        <MantineProvider>
-            <div>
-                <h1>Hello World</h1>
-            </div>
+        <MantineProvider theme={{ ...theme }}>
+            <RootLayout>
+                <NoteView />
+            </RootLayout>
         </MantineProvider>
     );
 }

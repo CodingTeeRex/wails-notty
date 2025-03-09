@@ -1,1 +1,6 @@
+echo "Running gofmt..."
+git ls-files -- '*.go' | xargs gofmt -w
+git add $(git ls-files -- '*.go')
+
+echo "Running lint-staged for frontend..."
 cd frontend && yarn lint-staged
