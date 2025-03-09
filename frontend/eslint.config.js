@@ -1,8 +1,9 @@
-import globals from 'globals';
 import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import mantine from 'eslint-config-mantine';
 import pluginReact from 'eslint-plugin-react';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default defineConfig([
     { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
@@ -10,6 +11,7 @@ export default defineConfig([
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     pluginReact.configs.flat.recommended,
+    ...mantine,
     {
         rules: {
             'react/react-in-jsx-scope': 'off',
